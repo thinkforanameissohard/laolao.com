@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新增和废除属性</title>
+</head>
+<body>
+	全局属性
+		contentEditable属性
+		designMode属性-只能在js里面被修改编辑，用来指定整个页面是否可编辑，当页面可编辑时候，页面上任何支持contentEditable属性的元素都变成可编辑状态。
+		hidden属性
+		spellcheck属性
+		tabindex属性
+
+	<h2>可编辑列表：contentEditable</h2>
+	<ul contenteditable="false">
+		<li>默认可编辑：true</li>
+		<li>默认可编辑：true</li>
+		<li>默认可编辑：true</li>
+	</ul>
+	
+	<h2>隐藏：hidden</h2>
+	<ul hidden="">
+		<li>加了就不可见，没加就可见</li>
+		<li>加了就不可见，没加就可见</li>
+		<li>加了就不可见，没加就可见</li>
+	</ul>
+
+	<h2>进行拼写检查：spellcheck</h2>
+	<p contentEditable="true" spellcheck="true">这里是可编辑段落</p>
+
+
+	<a href="#" tabindex="1">tableindex:获取焦点</a>
+	<a href="#" tabindex="2">tableindex:获取焦点</a>
+	<a href="#" tabindex="3">tableindex:获取焦点</a>
+</body>
+</html>:获取焦点

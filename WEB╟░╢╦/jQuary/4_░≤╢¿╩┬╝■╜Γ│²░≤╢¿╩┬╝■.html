@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$("document").ready(function(){
+				$("#A").bind("click",C1);
+				$("#A").bind("click",C2);
+				$("#A").unbind("click");/*一次性解除两个事件*/
+				// $("#A").unbind("click",C1);/*解除指定事件*/
+				
+				// on和bind的区别是，on多一个可以设置子元素触发绑定事件的参数
+				$("#A").on("click",C1);
+				$("#A").on("click",C2);
+				$("#A").off("click",C2);/*解除指定事件*/
+			});
+			function C1()
+			{
+				console.log("调用了绑定事件1");
+			}
+			function C2()
+			{
+				console.log("调用了绑定事件2");
+			}
+		</script>
+	</head>
+	<body>
+		<button id="A" type="button">点我</button>
+	</body>
+</html>

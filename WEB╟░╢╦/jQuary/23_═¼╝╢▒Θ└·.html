@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// $("h4").siblings().css({border:"3px dotted #BB60D5"});
+				// $("h4").next().css({border:"3px dotted #BB60D5"});
+				// $("h4").nextAll().css({border:"3px dotted #BB60D5"});
+				$("h3").nextUntil("h6").css({border:"3px dotted #BB60D5"});
+			});
+		</script>
+		<style type="text/css">
+			#div1 *{
+				display: block;
+				border: 3px double darkorange;
+				color: #D55537;
+				padding: 5px;
+				margin: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<p>测试</p>
+			<h1>测试</h1>
+			<h2>测试</h2>
+			<h3>测试：nextUntil("h6")区间向下修改</h3>
+			<h4>测试：siblings()修改掉除了h4的同级元素</h4>
+			<h5>测试：next()修改掉它的下一个</h5>
+			<h6>测试：extAll()修改下面所有的</h6>
+		</div>
+	</body>
+</html>

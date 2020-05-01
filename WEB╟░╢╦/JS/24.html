@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM对象控制html</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<p id="p1" name="pn">getElementsByName()——获取name </p>
+	<p id="p2" name="pn">getElementsByTagName()——获取元素 </p>
+	<p id="p3" name="pn">getAttribute()	一获取元素属性 </p>
+	<p id="p4" >setAttribute()	一设置元素属性 </p>
+	<p id="p5" style="color: #C07AB8;">childNodes()	——访问子节点 </p>
+	<div><p id="p6">parentNode()	一访问父节点 </p></div>
+	<p id="p7">createElement()——创建元素节点 </p>
+	<p id="p8">createTextNode ——创建文本节点 </p>
+	<p id="p9">insertBefore()<span id="s9"></span>一插入节点 </p>
+	<p id="p10">removeChild()	——删除节点 </p>
+	<p id="p11">offsetHeight()	一网页尺寸 </p>
+	<p id="p12">scrollHeight()	一网页尺寸 </p>
+	<ul id="div">
+		<li>删除子节点</li>
+		<li>删除子节点</li>
+		<li>删除子节点</li>
+	</ul>
+	div
+	<script>
+	function getName()
+	{
+		// var count = document.getElementsByName("pn");
+		var count = document.getElementsByTagName("p");
+		alert("名字相同就获取多个"+count.length);
+		var p=count[1];
+		p.innerHTML = "根据数组下标更改指定的";
+	}
+	// getName();
+	var c= document.getElementById("p3");
+	c.innerHTML= c.getAttribute("style");
+	
+	var d = document.getElementById("p4");
+	d.setAttribute("style","color: #00E3E3;");
+	
+	var child  =document.getElementsByTagName("ul")[0].childNodes;
+	document.getElementById("p5").innerHTML = child[0].nodeType;
+	
+	var father = document.getElementById("p6");
+	document.getElementById("p6").innerHTML = father.parentNode.nodeName;
+	
+	var body = document.getElementById("p7");
+	var input = document.createElement("input");
+	input.type = "button";
+	input.value="按钮";
+	body.appendChild(input);
+	
+	var body = document.getElementById("p8");
+	var inputs = document.createTextNode("创建的文本");
+	body.appendChild(inputs);
+	
+	var p9 = document.getElementById("p9");
+	var node = document.getElementById("s9");
+	var newnode = document.createElement("span");
+	newnode.innerHTML="我是新创建出来的";
+	newnode.style.color="#FF60AF";
+	p9.insertBefore(newnode,node);
+	
+	var div =document.getElementById("div");
+	var p = div.removeChild(div.childNodes[1]); 
+	
+	var width = document.body.offsetWidth || documentElement.offsetWidth;
+	var hight = document.documentElement.offsetHeight;
+	document.getElementById("p11").innerHTML=width+","+hight;
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// $("#result").text("数据请求中，请稍后...");
+				$("#btn").on("click",function(){
+					// $.get("15_ajax.php",{name:$("#namevalue").val()},function(data){
+					// 	$("#result").text(data);
+					// });
+					// alert("laoalo");
+					$.post("15_ajax.php",{name:$("#namevalue").val()},function(data){
+						$("#result").text(data);
+					}).error(function(){
+						$("#result").text("通信故障");
+					});
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" name="" id="namevalue" value="" />
+		<br>
+		<button id="btn" type="button">Send</button>
+		结果：<span id="result"></span>
+	</body>
+</html>

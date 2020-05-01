@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="25_实例_Menu菜单.css"/>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".main>a").hover(function(){
+					var ulNode = $(this).next("ul");
+					// if(ulNode.css("display")=="none")
+					// {
+					// 	ulNode.css("display","block");
+					// }
+					// else
+					// {
+					// 	ulNode.css("display","none");
+					// }
+					// alert("laolao");
+					ulNode.slideToggle(1000);
+					// ulNode.toggle("normal");
+					// $(this).find("ul").css("display","block");
+					// $(this).next("ul").append("laoalo");
+				});
+				$(".hmain").hover(function(){
+					$(this).children("ul").slideDown();
+					changeIcon($(this).children("a"));
+				},function(){
+					$(this).children("ul").slideUp();
+					changeIcon($(this).children("a"));
+				});
+			});
+			function changeIcon(mainNode){
+				if(mainNode)
+				{
+					if(mainNode.css("background-image").indexOf("4.png")>=0)
+					{
+						mainNode.css("background-image","url('image/3.png')");
+					}
+					else
+					{
+						mainNode.css("background-image","url('image/4.png')");	
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<ul >
+			<li class="main">
+				<a href="">微博</a>
+				<ul>
+					<li><a href="">美攻一枚</a></li>
+					<li><a href="">林中的鬼鬼</a></li>
+				</ul>
+			</li>
+			<li class="main">
+				<a href="">海棠</a>
+				<ul>
+					<li><a href="">QJF</a></li>
+					<li><a href="">华似比</a></li>
+				</ul>
+			</li>
+			<li class="main">
+				<a href="">青花鱼养殖论坛</a>
+				<ul>
+					<li><a href="">大师兄说他喜欢钱</a></li>
+					<li><a href="">主子死后我立刻反了</a></li>
+				</ul>
+			</li>
+		</ul>
+	<br>
+	<br>
+	<br>
+	<ul>
+		<li class="hmain">
+			<a href="">微博</a>
+			<ul>
+				<li><a href="">美攻一枚</a></li>
+				<li><a href="">林中的鬼鬼</a></li>
+			</ul>
+		</li>
+		<li class="hmain">
+			<a href="">海棠</a>
+			<ul>
+				<li><a href="">QJF</a></li>
+				<li><a href="">华似比</a></li>
+			</ul>
+		</li>
+		<li class="hmain">
+			<a href="" >青花鱼养殖论坛</a>
+			<ul>
+				<li><a href="">大师兄说他喜欢钱</a></li>
+				<li><a href="">主子死后我立刻反了</a></li>
+			</ul>
+		</li>
+	</ul>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>formmethod，formenctype属性</title>
+</head>
+<body>
+	在HTML4中，一个表单内只能有一个action属性用来对表单内所有元素统一指定提交页面，所以每个表单内页只有一个method属性来统一指定提交方法。在HTML5中，可以使用formmethod属性来对每一个表元素分别指定不同的提交方法。<br>
+	
+	<form id="textform" action="">
+		<input type="submit" name="s" value="v" formmethod="get" formaction="http://www.laolao.com:2333/text1.php">一个form可以有不同的提交方式<br>
+		<input type="submit" name="s" value="v" formmethod="post" formaction="http://www.laolao.com:2333/text2.php">一个form可以有不同的提交方式<br>
+	</form>
+<hr>
+
+	在HTML4中，表单元素具有一个enctype属性，该属性用于指定在表单发送到服务器之前应该如何对表单内的数据进行编码。在HTML5中，可以使用formenctype属性对表单元素分别指定不同的编码方式。<br><br>
+
+	<form action="http://www.laolao.com:2333/text4.php" method="post">
+		<input type="text" name="s1" formenctype="text/plain">:表单数据中的空格被转化为加号，但不对表单中的特殊字符进行编码 <br>
+		<input type="text" name="s2" formenctype="multipart/form-data">:不对字符进行编码，在使用文件上传的时候用这个<br>
+		<input type="text" name="s3" formenctype="application/x-www-form-urlencoded">:发送前编码所有字符，当表单的method="get"浏览器就用这种编码方式把表单转化为一个字符 <br>
+
+		<input type="submit">
+	<br>
+	</form>	
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		1、Screen对象:
+		window.screen对象包含有关用户屏幕的信息
+		2、属性:
+		<button id="btn" type="button" onclick="getLoc()">点击</button>
+		<p>screen.availWidth -可用的屏幕宽度：<span id="p1"></span></p>
+		<p>screen.availHeight -可用的屏幕高度：<span id="p2"></span></p>
+		<p>screen.height -屏幕高度：<span id="p3"></span></p>
+		<p>screen.width -屏幕宽度：<span id="p4"></span></p>
+		<script type="text/javascript">
+			function getLoc()
+			{
+				document.getElementById("p1").innerHTML = screen.availWidth;
+				document.getElementById("p2").innerHTML = screen.availHeight;
+				document.getElementById("p3").innerHTML = screen.height;
+				document.getElementById("p4").innerHTML = screen.width;
+			}
+		</script>
+	</body>
+</html>

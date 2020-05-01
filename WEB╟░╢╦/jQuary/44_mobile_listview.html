@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title></title>
+		<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	</head>	
+	<body>
+		<ul data-role="listview">
+			<li>A无序列表</li>
+			<li>B无序列表</li>
+			<li>C无序列表</li>
+			<li>D无序列表</li>
+		</ul>
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr >
+		<br>
+		<br>
+		<br>
+		<br>
+		<ol data-role="listview">
+			<li>A有序列表</li>
+			<li>B有序列表</li>
+			<li>C有序列表</li>
+			<li>D有序列表</li>
+		</ol>
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr >
+		<br>
+		<br>
+		<br>
+		<br>
+		<ul data-role = "listview">
+			<li><a href="">可点击列表</a></li>
+			<li><a href="">可点击列表</a></li>
+			<li><a href="">可点击列表</a></li>
+			<li><a href="">可点击列表</a></li>
+		</ul>
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr >
+		<br>
+		<br>
+		<br>
+		<br>
+								<!-- 允许过滤          允许插入 -->
+		<ul data-role="listview" data-filter="true" data-inset="true">
+			<li><a href="">A可筛选列表</a></li>
+			<li><a href="">B可筛选列表</a></li>
+			<li><a href="">C可筛选列表</a></li>
+			<li><a href="">D可筛选列表</a></li>
+		</ul>
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr >
+		<br>
+		<br>
+		<br>
+		<br>
+		<form class="ui-filterable" method="post">
+			
+			<input id="autoinput" data-type = "search" value=""/>
+		</form>
+												<!-- data-filter-reveal="true"：默认允许过滤 data-input:指定输入 data-insert：允许被插入-->
+		<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-input="#autoinput" data-insert="true">
+			<li><a href="#">Adele</a></li>
+			    <li><a href="#">Agnes</a></li>
+			    <li><a href="#">Albert</a></li>
+			    <li><a href="#">Billy</a></li>
+			    <li><a href="#">Bob</a></li>
+			    <li><a href="#">Calvin</a></li>
+			    <li><a href="#">Cameron</a></li>
+			    <li><a href="#">Chloe</a></li>
+			    <li><a href="#">Christina</a></li>
+			    <li><a href="#">Diana</a></li>
+			    <li><a href="#">Gabriel</a></li>
+			    <li><a href="#">Glen</a></li>
+			    <li><a href="#">Ralph</a></li>
+			    <li><a href="#">Valarie</a></li>
+		</ul>
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr >
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- data-autodividers="true" 属性通过对列表项文本的首字母进行大写来创建分隔符:个个选项的自动归类 -->
+		<ul data-role="listview" data-autodividers = "true" data-filter="true"  data-input="#autoinput" data-insert="true">
+			<li><a href="#">Adele</a></li>
+			<li><a href="#">Agnes</a></li>
+			<li><a href="#">Albert</a></li>
+			<li><a href="#">Billy</a></li>
+			<li><a href="#">Bob</a></li>
+			<li><a href="#">Calvin</a></li>
+			<li><a href="#">Cameron</a></li>
+			<li><a href="#">Chloe</a></li>
+			<li><a href="#">Christina</a></li>
+			<li><a href="#">Diana</a></li>
+			<li><a href="#">Gabriel</a></li>
+			<li><a href="#">Glen</a></li>
+			<li><a href="#">Ralph</a></li>
+			<li><a href="#">Valarie</a></li>
+		</ul>
+	</body>
+</html>

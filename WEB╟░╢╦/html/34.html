@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>heigh,width,indeterminate属性</title>
+</head>
+<body>
+	<h3>复选框的indeterminate属性</h3>
+	对于复选框checkbox元素来说，过去只是选取与非选取这两种状态。在HTML5中，可以在JavaScript脚本代码中对该元素使用indeterminate属性，以说明复选框处于“尚未明确是否选取”状态。<br><br>
+	<input type="checkbox" indeterminate id="cb">测试
+	<script>
+		var cb=document.getElementById("cb");
+		cb.indeterminate=true;
+	</script>
+
+<hr>
+	<h3>image提交按钮的height，width属性</h3>
+	针对类型为image的input元素, HTML5新增了两个属性，height、width分别用来指定图片按钮的高度和宽度。<br><br>
+	<form action="http://www.laolao.com:2333/text1.php" method="post">
+		点击图片提交： <input type="text" name="name">
+		<input type="image" src="C:\Users\坂田银时\Pictures\Saved Pictures\1.gif" alt="编辑" width="80px" height="80px">
+	</form>
+
+</body>
+</html>

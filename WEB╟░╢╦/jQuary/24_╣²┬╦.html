@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// $("div p").first().css("background-color","red");
+				// $("div p").last().css("background-color","red");
+				// $("div p").eq(1).css("background-color","red");
+				// $("div p").filter(".pclass").css("background-color","red");
+				$("div p").not(".pclass").css("background-color","red");
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<p>first：寻找同样元素的第一个;filter(".pclass")：选出选中的</p>
+		</div>
+		<div>
+			<p class="pclass">last：寻找同样元素的最后一个；not(".pclass")：排除掉选中的</p>
+		</div>
+		<div>
+			<p class="pclass">eq：数组索引</p>
+		</div>
+	</body>
+</html>

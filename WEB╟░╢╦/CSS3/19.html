@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>外边距合并</title>
+	<style>
+		body{
+			margin:0px;
+		}
+		.mgs{
+			background-color: blue;
+			width: 500px;
+			height: 500px;
+			margin-bottom:100px;
+			/*设置底边距*/
+		}
+		.mg{
+			margin: 10px;
+		}
+		.bd{
+			border-style: dotted;
+		}
+		.pd{
+			padding: 100px;
+			background-color: lightgreen;
+		}
+		.content{
+			background-color: lightblue;
+		}
+
+		.mg1{
+			margin: 50px;
+		}
+		.bd1{
+			border-style: dotted;
+		}
+		.pd1{
+			padding: 100px;
+			background-color: lightgreen;
+		}
+		.content1{
+			background-color: lightblue;
+		}
+
+
+	</style>
+</head>
+<body>
+	
+	
+
+	<div class="mg">
+		<div class="bd">
+			<div class="pd">
+				<div class="content">
+				外边距合并是自动进行的，遵循的是外边距大的那个
+				</div>
+			</div>
+		</div>
+
+	<div class="mg1">
+		<div class="bd1">
+			<div class="pd1">
+				<div class="content1">
+				外边距合并是自动进行的，遵循的是外边距大的那个
+				</div>
+			</div>
+		</div>
+	
+
+	</div>
+	2、外边距常用属性:
+		margin
+		设置所有边距
+		margin-left
+		设置左边距
+		margin-right
+		设置右边距
+		margin-top
+		设置上边距
+</body>
+</html>

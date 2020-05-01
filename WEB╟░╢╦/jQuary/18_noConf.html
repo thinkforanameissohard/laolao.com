@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			var m = $.noConflict();
+			m(document).ready(function(){
+				m("#btn").click(function(){
+					m("div").text("如果$冲突可以用这个方式来代替");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="A">
+			
+		</div>
+		<button type="button" id="btn">$.noConflict()</button>
+	</body>
+</html>

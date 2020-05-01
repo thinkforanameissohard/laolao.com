@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script src="./js/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#menu").menu({position:{at:"left bottom"}});
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="./js/jquery-ui.min.css"/>
+		<style type="text/css">
+			#menu{
+				width: 250px;
+				text-align: center;
+			}
+			.ui-menu:after {
+				content: ".";
+				display: block;
+				clear: both;
+				visibility: hidden;
+				line-height: 0;
+				height: 0;
+			}
+			.ui-menu .ui-menu-item {
+				display: inline-block; 
+				/* display: block; */
+				float: left;
+				margin: 0;
+				padding: 10;
+				width: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="menu">
+			<li>
+				<a href="#">Java</a>
+				<ul>
+					<li><a href="#">Java EE</a></li>
+					<li><a href="#">Java SE</a></li>
+					<li><a href="#">Java ME</a></li>
+				</ul>
+			</li>
+			<li><a href="#">C++</a></li>
+			<li><a href="#">C</a></li>
+			<li><a href="#">Python</a></li>
+		</ul>
+	</body>
+</html>

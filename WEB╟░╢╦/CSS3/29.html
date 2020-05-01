@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: lightgreen;
+			position: relative;
+		}
+		.div1{
+			animation:anim 5s infinite alternate;/*infinite alternate:不断执行*/
+		}
+		@keyframes anim
+		{
+			0%{ background:lightgreen;left:0px;top: 0px; }
+			25%{ background: lightblue;left: 0px;top: 0px; }
+			50%{ background: lightyellow;left: 200px;top: 200px; }
+			75%{ background: pink;left: 0px;top: 200px; }
+			100%{ background: lightgreen;left: 0px;top: 0px; }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="div1">animation:动画效果</div>
+</body>
+</html>

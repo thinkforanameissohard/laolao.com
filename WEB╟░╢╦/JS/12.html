@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件</title>
+	<style>
+		.div{
+			width: 100px;
+			height: 100px;
+			background-color: cadetblue;
+		}
+
+	</style>		
+</head>
+<body onload="mgs()">
+	onClick：单击事件 <br>
+	onMouseOver：鼠标经过事件 <br>
+	onMouseOut：鼠标移出事件 <br>
+	onChange：文本内容改变事件 <br>
+	onSelect：文本框选中事件 <br>
+	onFocus：光标聚集事件 <br>
+	onBlur：移开光标事件 <br>
+	onLoad：网页加载事件 <br>
+	onUnload：关闭网页事件 <br>
+<hr>
+	<button onclick="demo()">按钮</button>
+	<script>
+	function demo()
+	{
+		alert("onClick：单击事件");
+	}
+	</script>
+	<div class="div" onmouseout="onOut(this)" onmouseover="onOver(this)"></div>
+	<script>
+	function onOver(oj)
+	{
+		oj.innerHTML="鼠标经过事件";
+	}
+	function onOut(oj)
+	{
+		oj.innerHTML="鼠标移出事件";
+	}
+	</script>
+<hr>
+	<form action="">
+		<input type="text" onchange="changeDemo(this)">
+		<input type="text" onselect="selectDemo(this)" onfocus="onFocusDem(this)">
+	</form>
+	<script>
+		function changeDemo(bg)
+		{
+			alert("文本内容改变事件");
+		}
+		function selectDemo(bt)
+		{
+			bt.style.background="pink";
+		}
+		function onFocusDem(bt)
+		{
+			bt.style.background="lightgreen";
+		}
+		function mgs()
+		{
+			alert("onLoad：网页加载事件");
+		}
+	</script>
+
+</body>
+</html>

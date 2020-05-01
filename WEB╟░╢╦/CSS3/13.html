@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定位</title>
+	<style>
+	#position1{
+			padding: 20px;
+			width:200px;
+			height:200px;
+			background-color: #FF79BC;
+			position:absolute;/*相当于从页面中抠出来，不占位置*/
+			top:20px;
+			left:20px;
+		}
+	#position2{
+			width:200px;
+			height:200px;
+			background-color: #FF79BC;
+			position:static;/*偏移量对它不起效果*/
+			top:10px;
+			left:10px;
+		}
+	#position3{
+		width:200px;
+		height:200px;
+		background-color: orange;
+		position:relative;/*偏移量对它不起效果*/
+		top:-20px;/*元素向上的偏移量*/
+		left:50px;/*元素向左的偏移量*/
+		z-index: 1;/*设置元素的堆叠顺序[覆盖],谁的值大谁在前面*/
+	}
+	#position4{
+			width:200px;
+			height:200px;
+			background-color: #FF79BC;
+			position:relative;/*偏移量对它不起效果*/
+			top:10px;
+			left:10px;
+			z-index: 2;/*设置元素的堆叠顺序[覆盖],谁的值大谁在前面*/
+		}
+	</style>
+</head>
+<body>
+	1、CSS定位:	<br><br>
+		改变元素在页面上的位置 	<br><br>
+	2、CSS定位机制:	<br><br>
+		普通流:元素按照其在HTML中的位置顺序决定排布的过程	<br><br>
+		浮动	<br><br>
+		绝对布局	<br><br>
+
+<!--
+right
+元素向右的偏移量
+bottom
+元素向下的偏移量 
+overflow
+设置元素溢出其区域发生的事情[滚动]
+clip
+设置元素显示的形状[图片]
+vertical-align
+设置元素垂直对齐方式
+
+
+-->
+
+	<div id="position4">position:把元素故在一一个静态的、相对的、绝对的、或固定的位置中
+	</div>
+	<div id="position3">position:把元素故在一一个静态的、相对的、绝对的、或固定的位置中
+	</div>
+	<script>
+	for (var i =0; i <=100; i++) {
+		document.write(i+"<br/>");
+		}
+	</script>
+</body>
+</html>

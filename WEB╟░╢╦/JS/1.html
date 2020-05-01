@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+1、JavaScript用法: <br>
+	HTML中的脚本必须位于&lt;script&gt;&lt;/script&gt;标签之间脚本可被放置在HTML页面的&lt;body&gt;和&lt;head&gt;部分中 <br>
+2、JavaScript标签: <br>
+	在HTML中插入JavaScript,使用&lt;script&gt;标签在&lt;script&gt;&lt;/script&gt;之间书写代码 <br>
+3、JavaScript使用限制: <br>
+	在HTML中，不限制脚本数量 <br>
+	通常会把脚本放置于&lt;head&gt;标签中，以不干扰页面内容 <br>
+<hr>
+
+
+	<script>
+		document.write("JS可以放到body里面也可以放到head里面");
+	</script>
+	<script type="text/javascript" src="1.js"></script>
+
+	<script>
+		document.write("<h1>这里面可以加标签<h1>");
+	</script>
+	<p id="pid">我是内容</p>
+	<script>
+	document.getElementById("pid").innerHTML="修改p标签的内容";
+	</script>
+</body>
+</html>

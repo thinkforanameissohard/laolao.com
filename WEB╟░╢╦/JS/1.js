@@ -1,0 +1,1 @@
+document.write("外部引入js文件");

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#B1").on("click",function(){
+						$("#A").text("一朵菊花脸上遮");
+					});
+				$("#B2").on("click",function(){
+						$("#C").html('<h1  style="font-family:楷体;">一朵菊花脸上遮</h1>');
+					});
+				$("#B3").on("click",function(){
+						$("#P").val("修改了默认值");
+					});
+				$("#B4").on("click",function(){
+						// $("#a").attr("href","https://weibo.com/u/6459580991/home?topnav=1&wvr=6");
+						$("#a").attr({
+						 "href":"https://weibo.com/u/6459580991/home?topnav=1&wvr=6",
+						 "style":"text-decoration: none;color:green;",
+						 "title":"laolao"
+						 });
+					});
+				$("#B5").on("click",function(){
+						$("#p5").text(function(i,ot){
+							return "回调函数【"+ot+" "+(i)+"】";
+						});
+					});	
+				
+				
+			});
+			
+		</script>
+	</head>
+	<body>
+		<p id="A">laoalo</p>
+		<button id="B1" type="button">laoalo</button>
+		
+		<p id="C">laoalo</p>
+		<button id="B2" type="button" style="font-family:楷体;">laoalo</button>
+		
+		<input type="text" name="" id="P" value="laolao" />
+		<button id="B3" type="button" style="font-family:楷体;">点击</button>
+		
+		<a id="a" href="http://www.7k7k.com/swf/199165.htm#play-gamne-title">对属性值进行修改 </a>
+		<button id="B4" type="button" style="font-family:楷体;">点击</button>
+		
+		<p id="p5">laolaolaoalo</p>
+		<button id="B5" type="button" style="font-family:楷体;">点击</button>
+		
+	</body>
+</html>

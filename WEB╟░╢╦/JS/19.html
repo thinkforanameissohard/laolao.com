@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对象</title>
+</head>
+<body>
+	<script>
+		// 对象的创建
+		people = new Object(); 
+		// object()是一个最大的对象
+		people.name = "iwen";
+		people.age = 20;
+		document.write("name:"+people.name+",age:"+people.age+"<br>");
+
+		people2={name:"laolao",age:"30"};
+		document.write("name:"+people2.name+",age:"+people2.age+"<br>");
+
+		function People(name,age)
+		{
+			this.name=name;
+			this.age=age;
+		}
+		son = new People("laolao",20);
+		document.write("name:"+son.name+",age:"+son.age+"<br>");
+	</script>
+	
+</body>
+</html>

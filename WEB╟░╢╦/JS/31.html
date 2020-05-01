@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>面向对象</title>
+	</head>
+	<body>
+		<script>
+			function Person()
+			{
+				var _this={};
+				_this.say = function(){
+					alert("laolao");
+				}
+				return _this;
+			}
+			function Teacher(){
+				var _this = Person();
+				var superSay = _this.say;
+				_this.say = function(){
+					superSay.call(_this);
+					alert("T+laolao");
+				}
+				return _this;
+			}
+			var t = Teacher();
+			t.say();
+		</script>
+	</body>
+</html>

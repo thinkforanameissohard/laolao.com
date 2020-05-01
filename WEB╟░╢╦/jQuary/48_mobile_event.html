@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title></title>
+		<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript">
+			$(document).on("pageinit",function(){
+				alert("pageinit:文件加载后触发");
+				$("#p1").on("tap",function(){
+					$(this).hide();
+				});
+				$("#p2").on("taphold",function(){
+					$(this).hide();
+				});
+				$("#p3").on("swipe",function(){
+					$(this).hide();
+				});
+				$("#p4").on("swipeleft",function(){
+					$(this).hide();
+				});
+				$("#p5").on("swiperight",function(){
+					$(this).hide();
+				});
+				$(document).on("scrollstart",function(){
+					$(".p6").prepend("滚动开始");
+					// alert("滚动开始");
+				});
+				$(document).on("scrollstop",function(){
+					$(".p6").append("滚动结束");
+					// alert("滚动开始");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div data-role = "page" id="" >
+			<div data-role = "header"="" data-theme="a">
+				<h1>hello data-theme="a"</h1>
+			</div>
+			<div data-role = "content" >
+				<p id="p1">tap:点击事件 点我隐藏</p>
+				<p id="p2">taphold:长按事件 长按隐藏</p>
+				<p id="p3">swipe:滑动事件[左右都可] 滑动隐藏</p>
+				<p id="p4">swipeleft:滑动事件[左] 滑动隐藏</p>
+				<p id="p5">swiperight:滑动事件[右] 滑动隐藏</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				<p class="p6">scrollstart:滚动事件</p>
+				
+			</div>
+			<div data-role = "footer" data-theme="c">
+				<h1>welcome data-theme="c"</h1>
+			</div>
+		</div>
+	</body>
+</html>

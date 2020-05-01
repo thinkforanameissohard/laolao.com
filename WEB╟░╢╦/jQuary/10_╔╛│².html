@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script  type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btn").click(function(){
+					// $("#div").remove();/*包含本标签全部删除*/
+					$("#div").empty();/*删除标签内的东西*/
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="div" style="width: 200px;height: 200px;border: 1px solid #C07AB8;background-color: #C4E1FF;">
+			测试
+			<p>测试</p>
+			<p>测试</p>
+		</div>
+		<button id="btn">删除</button>
+	</body>
+</html>

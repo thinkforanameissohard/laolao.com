@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>required，labels属性</title>
+</head>
+<body>
+	HTML5中新增的required属性可以应用在大多数输入元素上，在提交时，如果元素中内容为空白，则不允许提交，同时在浏览器中显示信息提示文字。<br>
+	<form action="http://www.laolao.com:2333/text1.php">
+		<input type="text" required="required">
+		<button type="submit">提交</button>
+	</form>
+<hr>
+	在HTML5中，为所有可使用标签的表单元素、button、 select元素等， 定义一个labels属性，属性值为一个NodeList对象,代表该元素所绑定的标签元素所构成的集合。 <br>
+	<script>
+		function Validate()
+		{
+			var txtName = document.getElementById("txt_name");
+			var button = document.getElementById("button");
+			var form = document.getElementById("testform");
+			if(txtName.value.trim()=="")
+			{
+				var label = document.createElement("label");
+				label.setAttribute("for","txt_name");
+				form.insertBefore(label,button);
+				txtName.labels[1].innerHTML = "请输入姓名";
+				txtName.labels[1].setAttribute("style","font-size:9px;color:red;");
+			}
+
+		}
+	</script>
+	<form id="testform" action="">
+		<label id="label" for="txt_name"></label>
+		<input id="txt_name" type="text">
+		<input id="button" type="button" value="验证" onclick="Validate()">
+	</form>
+
+
+</body>
+</html>

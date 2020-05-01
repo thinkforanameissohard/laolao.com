@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文本</title>
+	<style>
+		p {
+			color: pink;/*文本颜色*/
+			direction:;/*文本方向*/
+			text-align:center;/*对齐元素中的文本*/
+		}
+		h6{
+			text-indent:2em;
+			/*缩进元素中文本的首行*/
+		}
+		#p1{
+			text-transform:capitalize;
+				/*元素中的字母*/
+			}
+		#p2{
+			text-transform:lowercase;
+			/*元素中的字母*/
+		}
+		#p3{
+			text-transform:uppercase;
+				/*元素中的字母*/
+			}
+		#shadow{
+			width: 200px;
+			text-shadow: 100px 5px 2px #96FED1;
+			/*向文本添加阴影： 左 上 阴影大小 颜色*/
+			word-wrap:normal;
+			/*规定文本的换行规则*/
+		}
+
+	</style>
+</head>
+<body>
+	<p>1、CSS文本：CSS文本属性可定义文本外观通过文本属性，可以改变文本的颜色、字符间距、对齐文本、装饰文本、对文本缩进</p>
+<hr>
+	<div>
+		<h6>测试首行缩进</h6>
+		<h4>测试首行缩进aaaaaaa</h4>
+		<h4>测试首行缩进aaaaaaa</h4>
+		<h4>测试首行缩进aaaaaaa</h4>
+		<h4>测试首行缩进aaaaaaa</h4>
+	</div>
+
+<hr>
+
+	<h3 id="p1">This is my web</h3>
+	<h3 id="p2">This is my wEb</h3>
+	<h3 id="p3">This iS My web</h3>
+<hr>
+	<p id="shadow">测试阴影+换行，测试阴影+换行测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行，测试阴影+换行</p>
+
+	<h3>英文换行不会把字体拆开</h3>
+	<p id="shadow">this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.this is my web.</p>
+
+<hr>
+line-height行高
+letter-spacing字符间距
+
+text-decoration向文本添加修饰
+
+
+unicode-bidi设置文本方向
+white-space元素中空白的处理方式
+word-spacing字间距
+
+</body>
+</html>

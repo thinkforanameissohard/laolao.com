@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ID,属性，后代,子元素,相邻兄弟选择器</title>
+	<style>
+		[title]{
+			color: aqua;
+		}
+		[href]{
+			font-size: 50px;
+		}
+		[href="http://pwnable.kr/play.php"]{
+			color: green;
+		}
+		[title~="title"]{
+			color: pink; /*~：代表模糊，只要有title都可以实现  */
+		}
+		p a{
+			color: red ;
+		}
+		h2>strong{
+			font-size: 30px;
+			font-family: 楷体;
+		}
+		li+li{
+			font-family: 幼圆;
+			color: lightgreen;
+		}
+	</style>
+</head>
+<body>
+2、类选择器和ID选择器区别:
+ID只能在文档中使用一次，而类可以多次使用
+ID选择器不能结合使用
+当使用js时候，需要用到id
+
+	<div id="mydiv">ID选择器与类选择器类似</div>
+	<p title="">属性选择器<属性选择器<属性选择器<</p>
+
+
+	1、简单属性选择: <br>
+		例如: [title]{} <br>
+	2、根据具体属性值选择: <br>
+		除了选择拥有某些的元素，还可以进一步缩小选择范围，只选择有特定属性值的元素 <br>
+	3、属性和属性值必须完全匹配 <br>
+	4、根据部分属性值选择 <br><br>
+	<a href="">极客学院</a>
+	<a href="http://pwnable.kr/play.php">属性和属性值必须完全匹配</a>
+<hr>
+	<p title="tit">根据部分属性值选择：title~</p>
+	<p title="title">根据部分属性值选择：title~</p>
+	<p title="t">根据部分属性值选择：title~</p>
+	<p title="title laolao">根据部分属性值选择：title~</p>
+<hr>
+
+	<p><strong>后代选择器<a>隔代也可以</a></strong>this is my web</p>
+<hr>
+
+	<h2>与后代选择器相比，子元素选择器只能选择作为某元素子元素的元素<strong>(隔代不可以)</strong></h2>
+<hr>
+	<div>
+		<ol>
+			<li>相邻兄弟选择器</li>
+			<li>相邻兄弟选择器</li>
+			<li>相邻兄弟选择器</li>
+		</ol>
+		<ul>
+			<li>可选择紧接在另一个元素后的元素，且二者有相同父元素</li>
+			<li>可选择紧接在另一个元素后的元素，且二者有相同父元素</li>
+			<li>可选择紧接在另一个元素后的元素，且二者有相同父元素</li>
+		</ul>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件处理</title>
+</head>
+<body>
+	1、HTML事件处理: <br>
+		直接添加到HTML结构中 <br>
+	2、DOMO级事件处理 <br>
+		把一个函数赋值给一个事件处理程序属性 <br>
+	3、DOM2级事件处理 <br>
+		addEventListener(“事件名” ，“事件处理函数”，“布尔值” ); <br>
+		true:事件捕获 <br>
+		false:事件冒泡 <br>
+	removeEventL istener(); <br>
+	4、IE事件处理程序 <br>
+		attachEvent <br>
+		detachEvent <br>
+	<div id="div">
+		<button id="btn1" onclick="demo()">安妮据</button>
+		<button id="btn2" >安妮据</button>
+		<button id="btn3" >安妮据</button>
+		<button id="btn4" >安妮据</button>
+	</div>
+	<script>
+		function demo()
+		{
+			alert("html事件处理");
+		}
+		var btn2 = document.getElementById("btn2");
+		btn2.onclick = function(){ alert("DOMO级事件处理1")}/*被覆盖*/
+		btn2.onclick = function(){ alert("DOMO级事件处理2")}
+		var btn3 = document.getElementById("btn3").addEventListener("click",function(){alert("DOM2级事件处理,多个实践一次处理不会被覆盖")})
+		function deo()
+		{
+			alert("事件兼容性处理");
+		}
+		var btn4=document.getElementById("btn4");
+		if(btn4.addEventListener)
+		{
+			btn4.addEventListener("click",deo);
+		}
+		else if(btn4.attachEvent)
+		{
+			btn4.attachEvent("onclick",deo);
+		}
+		else
+		{
+			btn4.onclick=deo();
+		}
+		
+	</script>
+</body>
+</html>

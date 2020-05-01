@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>异常</title>
+</head>
+<body>
+	<script>
+	function demo()
+	{
+		try{
+			alert(str);
+		}
+		catch(err)
+		{
+			alert(err);
+		}
+		
+	}
+	demo();
+	</script>
+
+
+	<form action="">
+		<input id="txt" type="text">
+		<input id="btn" type="button" onclick="deno()" value="按钮">
+	</form>
+	<script>
+	function deno()
+	{
+		try{
+			var e = document.getElementById("txt").value;
+			if(!e)
+			{
+				throw "throw可以抛出自定义的异常";
+			}
+		}
+		catch(err)
+		{
+			alert(err);
+		}
+	}
+
+
+	</script>
+</body>
+</html>

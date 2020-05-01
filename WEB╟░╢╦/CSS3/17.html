@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>边框</title>
+	<style>
+		p{
+			border-style: dotted;
+			border-top-style: double;
+			border-width: 5px;
+			border-top-width: 3px;
+			border-radius: 10px; /*圆角边框*/
+		}
+		#o{
+			background-color:#FFFFDF;
+			width: 500px;
+			height: 100px;
+			text-align: center;
+			box-shadow: 10px 10px 5px #73BF00;/*阴影 上 右 透明度 颜色*/
+		}
+		#w{
+			border-image-source: url("C:\\Users\\坂田银时\\Pictures\\Saved Pictures\\3.gif");
+			border-image-slice: 27 fill;
+            border-image-repeat: stretch;
+			width:auto;
+			height: 800px;
+			border: 40px solid transparent #C4E1FF;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="w">
+		<div id="o">
+
+			1、CSS边框: <br>
+				我们可以创建出效果出色的边框，并且可以应用于任何元素 <br>
+			2、边框的样式: <br>
+		</div>
+		<p>border-style:定义了10个不同的非继承样式，包括none</p>
+	</div>
+	
+
+
+
+
+</body>
+</html>

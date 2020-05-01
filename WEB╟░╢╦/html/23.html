@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>time元素与微格式</title>
+</head>
+<body>
+	<time datetime="2020-1-1">2020-1-1</time>
+	<time datetime="2020-1-1T20:00">2020-1-1</time>
+	<time datetime="2020-1-1T20:00Z">2020-1-1 Z表示utc标准时间</time>
+	<time datetime="2020-1-1T20:00+09:00">2020-1-1，+9表时差</time>
+
+<hr>
+
+	<article>
+		<header>
+			<h1>苹果</h1>
+			<p>第一个时间:用pubdate来表示当前具体的发布日期
+				<time datetime="2020-1-1" pubdate>2020-1-2</time></p>
+			<p>第二个时间:
+				<time datetime="2020-1-1">2020-1-2</time></p>
+		</header>
+	</article>
+</body>
+</html>

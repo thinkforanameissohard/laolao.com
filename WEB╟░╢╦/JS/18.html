@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件对象</title>
+</head>
+<body>
+	1、事件对象: <br>
+		在触发DOM事件的时候都会产生一个对象 <br>
+	2、事件对象event: <br>
+		1): type: 获取事件类型 <br>
+		2): target: 获取事件目标 <br>
+		3): stopPropagation(): 阻止事件冒泡 <br>
+		4): preventDefault():阻止事件默认行为（例如a标签的默认行为是href） <br>
+ <br>
+		<div id="div">
+			<button id="btn1" onclick="demo()">按钮</button>
+			<a id="aid" href="https://pan.baidu.com/disk/home?#/all?path=%2F&vmode=list">preventDefault():</a>
+		</div>
+		<script>
+		document.getElementById("btn1").addEventListener("click",showType);
+		document.getElementById("div").addEventListener("click",showDiv);
+		document.getElementById("aid").addEventListener("click",showA);
+		function showA(event)
+		{
+			event.stopPropagation();
+			event.preventDefault();
+		}
+		function showType(event)
+		{
+			alert(event.type);
+			alert(event.target);
+			event.stopPropagation();/*阻止事件冒泡，默认事件冒泡*/
+		}
+		function showDiv()
+		{
+			alert("子事件执行，父事件也会执行");
+		}
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btn1").on("click",function(){
+					$("#div1").fadeIn(3000);
+					$("#div2").fadeIn(7000);
+					$("#div3").fadeIn(11000);					
+				});
+				$("#btn2").on("click",function(){
+					$("#div1").fadeOut(3000);
+					$("#div2").fadeOut(7000);
+					$("#div3").fadeOut(11000);					
+				});
+				$("#btn3").on("click",function(){
+					$("#div1").fadeToggle(3000);
+					$("#div2").fadeToggle(7000);
+					$("#div3").fadeToggle(11000);					
+				});
+				$("#btn4").on("click",function(){
+					$("#div1").fadeTo(3000,0.3);/* 前面是执行时间，设置透明度0-1*/
+					$("#div2").fadeTo(7000,0.5);/* 前面是执行时间，设置透明度0-1*/
+					$("#div3").fadeTo(11000,0.7);/* 前面是执行时间，设置透明度0-1*/					
+				});
+			});
+		</script>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				margin: 2px;
+				/* float: left; */
+				border-radius: 5px;
+				/* display: none; */
+			}
+		</style>
+	</head>
+	<body>
+		<button type="button" id="btn1">淡入</button>
+		<button type="button" id="btn2">淡出</button>
+		<button type="button" id="btn3">淡入/淡出</button>
+		<button type="button" id="btn4">透明度</button>
+		<div id="div1" style="background-color: #808080;">asdaasd</div>
+		<div id="div2" style="background-color: #C07AB8;">asdaasd</div>
+		<div id="div3" style="background-color: #AFAF61;">asdaasd</div>	
+		
+</body>
+</html>

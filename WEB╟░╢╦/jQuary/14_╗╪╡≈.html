@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btn").click(function(){
+					// $("p").hide(1000,function(){
+					// 	alert("动画结束后被调用，这个方式称为回调");
+					// });
+					/*同时执行两个动画*/
+					$("p").css("color","#8FBC8F").slideUp(1000).slideDown(1000);
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<p>laolaolaolao</p>
+	</body>
+</html>

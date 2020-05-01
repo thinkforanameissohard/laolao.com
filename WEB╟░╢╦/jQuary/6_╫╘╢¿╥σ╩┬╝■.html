@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			var a;
+			$(document).ready(function()
+			{
+				// $("#A").click(function(){
+				// 	var e = jQuery.Event("myevent");
+				// 	$("#A").trigger(e);
+				// });
+				// $("#A").bind("myevent",function(event){
+				// 	console.log(event);
+				// });
+				a = $("#A");
+				a.click(function(){
+					var e = jQuery.Event("myevent");
+					a.trigger(e);
+				});
+				a.bind("myevent",function(event){
+					console.log(event);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="A" type="button">laoalo</button>
+	</body>
+</html>

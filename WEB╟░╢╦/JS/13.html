@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+</head>
+<body>
+	<script>
+		document.write("改变文档输出流,注意:绝对不要在文档加载完成之后使用document.write()。这会覆盖该文档");
+	</script>
+<hr>
+	<p id="pid">laolao</p>
+	<button onclick="demo()">按钮</button>
+	<h1  onmouseover="demo()">通过便签名找到html元素</h1>
+	<h1 onmouseover="demo()">通过便签名找到html元素</h1>
+	<script>
+	function demo()
+	{
+		document.getElementById("pid").innerHTML="通过id找到HTML元素";
+		var x =document.getElementsByTagName("h1");
+		// alert("放回一个列表"+x.length+","+x[0].value);
+	}
+	</script>
+<hr>
+	<a id="aid" href="https://weibo.com/u/6459580991/home?topnav=1&wvr=6">laolao</a>
+	<button onclick="ademo()" >按钮</button>
+	<script>
+	function ademo()
+	{
+		document.getElementById("aid").href="https://www.cnblogs.com/chrysanthemum/";
+	}
+
+	</script>
+</body>
+</html>

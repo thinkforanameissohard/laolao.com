@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script src="./js/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			// $(function(){
+			// 	$("#P").progressbar({value:50});
+			// });
+			var pb;
+			var max = 100;
+			var current = 0;
+			$(document).ready(function(){
+				pb = $("#P");
+				pb.progressbar({max:100});
+				setInterval(changepb,100);/*每一百毫秒刷新一次*/
+			});
+			function changepb(){
+				current++;
+				if(current>=100)
+				{
+					current=0;
+				}
+				pb.progressbar("option","value",current);
+			}
+		</script>
+		<link rel="stylesheet" type="text/css" href="./js/jquery-ui.min.css"/>
+	</head>
+	<body>
+		<div id="P">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 事件监听</title>
+</head>
+<body>
+	1、DOM EventL istener: <br>
+		方法:   addEventL istener():  <br>
+				removeEventL istener(): <br>
+	2、addEventL istener(): <br>
+		方法用于向指定元素添加事件句柄 <br>
+	3、removeEvent istener(): <br>
+		移除方法添加的事件句柄 <br>
+<hr>
+	<button id="btn">anniu</button>
+	<button id="bt">句柄之间不会覆盖</button>
+	<script>
+		document.getElementById("btn").addEventListener("click",function(){ alert("句柄")});
+		var x=document.getElementById("bt");
+		x.addEventListener("click",hello);
+		x.addEventListener("click",world);
+		x.removeEventListener("click",hello);
+		/*移除句柄，事件+函数*/
+		function hello()
+		{
+			alert("hello");
+		}
+		function world()
+		{
+			alert("world");
+		}
+	</script>
+
+</body>
+</html>

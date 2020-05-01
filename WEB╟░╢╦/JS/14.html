@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM操作CSS</title>
+	<style>
+		.div{
+			width: 100px;
+			height: 100px;
+			background-color: lightgreen;
+		}
+	</style>
+</head>
+<body>
+	<div onmouseover="demo(this)" class="div">
+		laolao
+	</div>
+	<script>
+	function demo(a)
+	{
+		a.style.background="pink";
+	}
+
+	</script>
+</body>
+</html>

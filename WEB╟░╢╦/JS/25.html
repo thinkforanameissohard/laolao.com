@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>1、window对象:</p> 
+			<p>window对象是BOM的核心，window对象指当前的浏览器窗口</p> 
+			<p>所有JavaScript全局对象、函数以及变量均自动成为window对象的成员</p> 
+			<p>全局变量是window对象的属性</p> 
+			<p>全局函数是window对象的方法</p> 
+			<p>甚至HTML DOM的document也是window对象的属性之-</p> 
+		<p>2、window尺寸:</p> 
+			<p>window.innerHeight -浏览器窗口的内部高度 //不包括工具栏和滚动条</p> 
+			<p>window.innerWidth -浏览器窗口的内部宽度</p> 
+			<hr>
+			<button id="btn" onclick="btnClicked()">按钮</button>
+			
+			<script type="text/javascript">
+				function btnClicked()
+				{
+					window.open("1.html","window","height=500px,width=800px,top=100px,left=100px,toolbar=yes,menubar=yes");
+					window.close();
+				}
+			</script>
+	</body>
+</html>

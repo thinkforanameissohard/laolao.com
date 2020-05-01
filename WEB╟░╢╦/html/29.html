@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>formtarget，autofocus属性</title>
+</head>
+<body>
+	在HTML4中，表单元素具有一个target属性，该属性用于指定在何处打开表单提交后所需要加载的页面。在HTML5中，可以对多个提交按钮分别使用formtarget属性来指定提交后在何处打开所需加载的页面。<br>
+
+	<form  id="textform" action="">
+		<input type="submit" formtarget="_blank" name="s1" value="v1" formaction="http://www.laolao.com:2333/text1.php">提交到1.php <br>
+		<input type="submit" formtarget="_self" name="s2" value="v2" formaction="http://www.laolao.com:2333/text2.php">提交到2.php<br>
+		<input type="submit" formtarget="_parent" name="s3" value="v3" formaction="http://www.laolao.com:2333/text3.php">提交到3.php<br>
+		<input type="submit" formtarget="_top" name="s2" value="v2" formaction="http://www.laolao.com:2333/text2.php">提交到2.php<br>
+		<input type="submit" formtarget="framename" name="s3" value="v3" formaction="http://www.laolao.com:2333/text3.php">在指定框架中打开<br>
+	</form>
+<hr>
+	为文本框、选择框或按钮控件加上autofocus属性，当画面打开时，该控件自动获得光标焦点。 <br>
+
+	<form action="">
+		<input type="text">
+		<input type="text" autofocus="">
+	</form>
+</body>
+</html>

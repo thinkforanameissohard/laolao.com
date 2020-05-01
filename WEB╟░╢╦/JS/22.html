@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组</title>
+</head>
+<body>
+	<script>
+	var a=["hello","laolao"];
+	var b=["la@@","tried"];
+	document.write(a.concat(b)+"<br>");
+	var c=['a','q','e','w','e','s','a','d','a','d','d','f','a','d'];
+	document.write(c.sort()+"<br>");
+	var cc=[9,78,55,1,2,3,67,4];
+	document.write("降序排列"+cc.sort(function(a,b){ return b-a;})+"<br>");
+	document.write("升序排列"+cc.sort(function(a,b){ return a-b;})+"<br>");
+	document.write(a.push("Day")+"<br>");
+	document.write(a.reverse()+"<br>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数构造器构造对象</title>
+		<script type="text/javascript">
+			var person={
+				name:"laolao",
+				age:20,
+				eat:function(){
+					alert("睡不好");
+				}
+			}
+			// person.eat();
+			
+			function Animal(){}
+			Animal.prototype={
+				name:"laolao",
+				age:20,
+				eat:function(){
+					alert("第二个睡不好");
+				}
+			}
+			var a  = new Animal();
+			// a.eat();
+			
+			/*面向对象*/
+			function people(){};
+			people.prototype.say = function(){ alert("我被继承了！！"+this._name);}
+			function Student(name){
+				this._name = name;
+			};
+			Student.prototype = new people();
+			var superSsay = Student.prototype.say;
+			Student.prototype.say = function(){
+				superSsay.call(this);				
+				alert("我覆盖了父类的say"+this._name);
+			}
+			var s = new Student("laolao");
+			s.say();
+			
+			(function(){
+				var n ="LaoLao+闭包";
+				function people(){};
+				people.prototype.say = function(){ alert("我被继承了！！"+n);}
+				window.people=people;
+			}());
+			
+			</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,8 @@
+/*派生选择器*/
+li strong {
+	color: pink;
+}
+strong 
+{
+	color: green;
+}

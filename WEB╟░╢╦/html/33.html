@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文本框的pattern,SelectionDirection属性</title>
+</head>
+<body>
+	在HTML5中，对input元素使用pattern属性，并且将属性值设为某个格式的正则表达式，在提交时会针对这些进行检查，检查其内容是否符合给定格式。当输入的内容不符合给定格式时，则不允许提交，同时在浏览器中显示信息提示文字，提示输入的内容必须符合给定格式。<br><br>
+	<form action="http://www.laolao.com:2333/text1.php" method="post">
+		<input type="text" pattern="[A-Z]{3}" name="pattern">
+		<input type="submit">
+	</form>
+
+<hr>
+    这对input元素与textarea元素，HTML5增加了SelectionDirection属性。当用户在这两个元素中用鼠标选取部分文字时，可以使用该属性来获取选取方向。<br><br>
+    当用户正向选取文字时，改属性值为“forward” <br><br>
+    当用户反向选取文字时，该属性值为“backward”。<br><br>
+    当用户没有选取任何文字时，该属性值为“forward”。<br><br>
+
+	<script>
+	function AD()
+	{
+		var control = document.forms[0]['text'];
+		var Direction = control.selectionDirection;
+		alert(Direction);
+	}
+
+
+	</script>
+	<form action="">
+		<input type="test" name="text">
+		<input type="button" value="点击" onclick="AD()">
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浮动</title>
+	<style>
+		#fd{
+			width: 100px;
+			height: 100px;
+			background-color: #FF60AF;
+
+			float: left;/*从文档中抠出来不在占有页面布局*/
+		}
+		#sd{
+			width: 200px;
+			height: 200px;
+			background-color: #00E3E3;
+
+			float: left;/*从文档中抠出来不在占有页面布局*/
+		}
+		#td{
+			width: 100px;
+			height: 100px;
+			background-color: #FFD306;
+
+			float: left;/*从文档中抠出来不在占有页面布局*/
+		}
+		#cont{
+			width: 300px;
+			height: 500px;
+			background-color: #AFAF61;
+		}
+		#text{
+			clear:left;
+		}
+
+	</style>
+</head>
+<body>
+
+
+1、浮动: <br>
+	float属性可用的值: <br>
+		left:元素向左浮动 <br>
+		right:元素向右移动 <br>
+		none:元素不浮动 <br>
+		inherit:从父级继承浮动属性 <br>
+2、clear属性: <br>
+	去掉浮动属性(包括继承来的属性) <br>
+	clear属性值: <br>
+		left、right: 去掉元素向左、向右浮动 <br>
+		both:左右两侧均去掉浮动 <br>
+		inherit:从父级继承来clear的值 <br><br>
+	<div id="cont">
+		<div id="fd"></div>
+		<div id="sd"></div>
+		<div id="td"></div>
+		<div id="text">my litter keiiuy</div>
+	</div>
+	
+</body>
+</html>

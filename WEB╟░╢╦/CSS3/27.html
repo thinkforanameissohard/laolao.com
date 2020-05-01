@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			margin-top: 100px;
+			padding: 10px;
+			background-color: lightblue;
+		}
+		.div2{
+			transform: translate(100px,100px); 
+			/*translate：平移，基于 `XY` 轴重新定位元素。属性值为一个时，`x`、`y` 轴参数相同；为两个时，`x`、`y` 轴分别定位
+			*/
+			/*这些设置是应为当时浏览器不支持translate才需要加上的，现在可以不用了；可以用来对每一种浏览器单独设置*/ -webkit-transform:translate(200px,100px);/*-webkit 是表示针对 safari chrome浏览器支持，
+			 */
+			/*这些设置是应为当时浏览器不支持translate才需要加上的，现在可以不用了；可以用来对每一种浏览器单独设置*/ -ms-transform:translate(200px,100px);/*IE*/
+			/*这些设置是应为当时浏览器不支持translate才需要加上的，现在可以不用了；可以用来对每一种浏览器单独设置*/ -o-transform:translate(200px,100px);/*opera*/
+			/*这些设置是应为当时浏览器不支持translate才需要加上的，现在可以不用了；可以用来对每一种浏览器单独设置*/ -moz-transform:translate(200px,100px);/*Firefox*/
+		}
+		.div3{
+			transform: rotate(200deg);/*旋转角度*/
+			/*这些设置是应为当时浏览器不支持translate才需要加上的，现在可以不用了；可以用来对每一种浏览器单独设置*/ -webkit-transform:rotate(280deg);/*-webkit 是表示针对 safari chrome浏览器支持，
+			 */
+			/*这些设置是应为当时浏览器不支持translate才需要加上的，现在可以不用了；可以用来对每一种浏览器单独设置*/ -ms-transform:rotate(90deg);/*IE*/
+			/*这些设置是应为当时浏览器不支持translate才需要加上的，现在可以不用了；可以用来对每一种浏览器单独设置*/ -o-transform:rotate(180deg);/*opera*/
+			/*这些设置是应为当时浏览器不支持translate才需要加上的，现在可以不用了；可以用来对每一种浏览器单独设置*/ -moz-transform:rotate(180deg);/*Firefox*/
+		}
+		.div4{
+			
+			transform: scale(1,2);/*宽度不变，高度二倍*/
+		}
+		.div5{
+			margin: 200px;
+			transform: skew(30deg,10deg);/*绕x转50，绕y轴转50*/
+		}
+		.div7{
+			transform: rotateX(50deg);
+		}
+		.div8{
+			transform: rotateY(50deg);
+		}
+	</style>
+</head>
+<body>
+	1、通过CSS3转换，我们能够对元素进行移动、缩放、转动、拉长或拉伸	转换是使元素改变形状、尺寸和位置的一种效果可以使用2D、3D来转换元素
+<hr>
+<h2>2、2D转换方法:</h2>
+	<div>这是初始效果</div>
+	<div class="div2">translate()：位移，这是改变后的效果</div>
+	<div class="div3">rotate()：旋转，这是改变后的效果</div>
+	<div class="div4">scale()：缩放，这是改变后的效果</div>
+	<div class="div5">skew()：倾斜，这是改变后的效果</div>
+	<div class="div6">matrix()：矩阵，这是改变后的效果</div>
+<hr>
+<h2>3、3D转换方法:</h2>
+	<div class="div7">rotateX()：倾斜，这是改变后的效果</div>
+	<div class="div8">rotateY()：矩阵，这是改变后的效果</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script src="./js/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#div').draggable();
+				
+				$('#div2').draggable();
+				$('#div3').droppable();
+				$('#div3').on("drop",function(){
+					$('#div3').text("放置事件");
+				});
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="./js/jquery-ui.min.css"/>
+</head>
+	<body>
+		<div id='div' style="width: 100px;height: 100px; border: double 2px #008000;">
+			拖动1
+		</div>
+		<div id='div2' style="width: 100px;height: 100px; border: double 2px #008000;">
+			放置2
+		</div>
+		<div id='div3' style="width: 200px;height: 200px; border: double 2px #0000CC;">
+			放置3
+		</div>
+	</body>
+</html>

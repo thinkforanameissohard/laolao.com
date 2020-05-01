@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		span{
+			color: #FF359A;
+		}
+	</style>
+	<body>
+<!-- 		1、Location对象:
+		window.location对象用于获得当前页面的地址(URL)，并把浏览器重定向到新的页
+		面。
+		2、Location对 象的属性:
+		 -->
+		
+		<button id="btn" type="button" onclick="getLoc()">点击</button>
+		<p>location.hostname返回web主机的域名：<span id="p1"></span></p>
+		<p>location.pathname返回当前页面的路径和文件名：<span id="p2"></span></p>
+		<p>location.protocol返回所使用的web协议(http:// 或https://)：<span id="p3"></span></p>
+		<p>location.href属性返回当前页面的URL：<span id="p4"></span></p>
+		<p>location.assign()方法加载新的文档：<span id="p5"></span></p>
+		<script type="text/javascript">
+			function getLoc()
+			{
+				document.getElementById("p1").innerHTML = window.location.hostname;
+				document.getElementById("p2").innerHTML = window.location.pathname;
+				document.getElementById("p3").innerHTML = window.location.protocol;
+				document.getElementById("p4").innerHTML = window.location.href;
+				document.getElementById("p5").innerHTML = window.location.assign("https://fishc.com.cn/forum-351-1.html");
+			}
+		</script>
+	</body>
+</html>

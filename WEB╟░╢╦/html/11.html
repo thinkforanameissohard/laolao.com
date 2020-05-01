@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单与PHP交互</title>
+</head>
+<body>
+<!-- action="...":里面是一个地址，根据这个地址找到对应的服务器  -->
+	<form action="http://192.168.171.130:2333/11.php" method="get">
+		用户名：get<input type="text" name="usr"><br>
+		密码：get<input type="password" name="pwd"><br>
+		<input type="submit" value="提交"><br>
+	</form>
+
+
+	<form action="http://192.168.171.130:2333/11.php" method="post">
+		用户名：post<input type="text" name="usr"><br>
+		密码：post<input type="password" name="pwd"><br>
+		<input type="submit" value="提交"><br>
+	</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("body").text("wait...");
+				// alert("laoalo");
+				$("body").load("16_ajax_加载碎片.htm",function(a,status,c){
+					console.log(status);
+					if(status=="error")
+					{
+						$("body").text("加载失败");
+					}
+				});
+				
+				$.getScript("16_HelloJS.js").complete(function(){
+					sayHello();
+				});
+			});
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$("document").ready(function(){
+				$("body").bind("click",bodyHandler);
+				$("div").bind("click",divHandler);
+				$("div").bind("click",divHandler2);
+			});
+			function bodyHandler(event)
+			{
+				console.log(event);
+				//执行函数的对象-->currentTarget: body 点击事件发生的对象-->target: div
+			}
+			function divHandler()
+			{
+				console.log(event);
+				//执行函数的对象-->currentTarget: div 点击事件发生的对象-->target: div
+				// event.stopPropagation();//阻止父级事件的冒泡
+				event.stopImmediatePropagation();//阻止所有的冒泡
+			}
+			function divHandler2()
+			{
+				console.log(event);
+			}
+		</script>
+	</head>
+	<body>
+		<div style="width: 300px; height: 300px;background-color: #00E3E3;">
+			<ul>
+				<li>A</li>
+				<li>B</li>
+				<li>C</li>
+				<li>D</li>
+			</ul>
+		</div>
+	</body>
+</html>

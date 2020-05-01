@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航栏</title>
+	<style>
+		#four{
+			list-style-type: none;/*去点*/
+			margin: 0px;
+			padding: 0px;
+		}
+		#one:link,#one:visited{
+			text-decoration: none;
+			display: block;
+			background-color: lightgreen;
+			color: black;
+			width: 50px;
+			text-align: center;
+		}
+		#one:active,#one:hover{
+			background-color: yellow ;
+		}
+		#two:link,#two:visited{
+			text-decoration: none;
+			background-color: lightgreen;
+			color: black;
+			width: 50px;
+			text-align: center;
+		}
+		#two:active,#two:hover{
+			background-color: yellow ;
+		}
+		#three{
+			display: inline;
+			padding: 6px;
+		}
+		#five{
+			list-style-type: none;/*去点*/
+			margin: 0px;
+			padding: 0px;
+			background-color: lightgreen;
+			width: 250px;
+			text-align:center;
+		}
+		@font-face{
+			font-family: 汉仪瘦金书简;
+			src:"C:\\Users\\坂田银时\\Documents\\汉仪瘦金书简.ttf";
+		}
+		a{
+			font-size: 20px;
+			font-family:汉仪瘦金书简;
+			font-weight: bold; 
+			color: white;
+		}
+
+		
+
+	</style>
+</head>
+<body>
+		垂直导航栏 <br>
+		<ul id="four">
+			<li><a id="one" href="">导航</a></li>
+			<li><a id="one" href="">导航</a></li>
+			<li><a id="one" href="">导航</a></li>
+			<li><a id="one" href="">导航</a></li>
+		</ul>
+<hr>
+		水平导航栏 <br>
+		<ul id="five">
+			<li id="three"><a id="two" href="">导航</a></li>
+			<li id="three"><a id="two" href="">导航</a></li>
+			<li id="three"><a id="two" href="">导航</a></li>
+			<li id="three"><a id="two" href="">导航</a></li>
+		</ul>
+</body>
+</html>

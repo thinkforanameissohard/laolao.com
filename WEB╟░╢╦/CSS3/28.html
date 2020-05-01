@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>过渡</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			margin: 200px;
+			padding: 10px;
+			background-color: lightyellow;
+
+		}
+		.div1{
+			transition: width 2s,height 2s,transform 2s;
+		}
+		.div1:hover{
+			background-color: pink;
+			transform: rotate(360deg);
+			width: 200px;
+			height: 200px;
+		}
+		.div2{
+			transition: width 2s,height 2s,transform 2s;
+			transition-delay: 2s;/*效果延时2s开始*/
+		}
+		.div2:hover{
+			background-color: pink;
+			transform: rotate(360deg);
+			width: 200px;
+			height: 200px;
+		}
+
+	</style>
+</head>
+<body>
+	1、通过使用CSS3，可以给元素添加一些效果
+	2、CSS3过渡是元素从一种样式转换成另一种样式
+		动画效果的CSS
+		动画执行的时间
+	3、属性:
+		
+		transition-property
+		过渡的名称
+		transition-duration
+		过渡效果花费的时间
+		transition-timing-function
+		过渡效果的时间曲线
+		
+		
+		<div class="div1">transition：设置四个过渡属性</div>
+		<div class="div2">transition-delay: 过渡效果开始时间</div>
+</body>
+</html>

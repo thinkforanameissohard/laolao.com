@@ -1,0 +1,12 @@
+h1 { 
+	color: lightblue;
+	font-family: "楷体";
+	}
+p,a,h5 { 
+	color: green;
+	font-family: "仿宋";
+	}
+body{
+
+	color: pink;
+}

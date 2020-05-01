@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// $("div").css("width","100px");
+				// $("div").css("height","100px");
+				// $("div").css("background-color", "#00FF00");
+				
+				// $("div").css({
+				// 	width:"100px",
+				// 	height:"100px",
+				// 	background-color:"#00FED0"
+				// });
+				
+				$("div").addClass("style");
+				$("div").click(function(){
+					// $(this).addClass("change");
+					// $(this).removeClass("change");
+					$(this).toggleClass("change");/*对这个hange进行添加移除*/
+				});
+			});
+		</script>
+		<style type="text/css">
+			.style{
+				width: 100px;
+				height: 100px;
+				background-color: #800080;
+			}
+			.change{
+				width: 100px;
+				height: 100px;
+				background-color: #8ABEB7;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+	<body >
+		<div id="a">
+			
+		</div>
+	</body>
+</html>

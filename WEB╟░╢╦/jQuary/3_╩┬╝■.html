@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script>
+			$("document").ready(function(){
+			
+				$("button").dblclick(function(){
+					$(this).text("鼠标双击");
+				});	
+				$("button").click(function(){
+					$(this).text("鼠标单击");
+				});
+				$("button").mouseenter(function(){
+					$(this).text("鼠标放上来了");
+				});
+				$("button").mouseleave(function(){
+					$(this).text("鼠标移开了");
+				});
+			});			
+		</script>
+	</head>
+	<body>
+		<button type="button">clicke me</button>
+	</body>
+</html>

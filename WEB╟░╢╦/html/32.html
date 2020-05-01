@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文本框的list，autocomplete属性</title>
+</head>
+<body>
+	在HTML5中，为单行文本框增加了一个list属性，该属性的值为某个datalist元素的id。datalist元素也是HTML 5中新增的元素，该元素类似于选择框，但是当用户想要设定的值不在选择列表之内时，允许自行输入。datalist元素本身并不显示，而是当文本框获得焦点时以提示输入的方式显示。<br>
+	<br>
+	<form action="">
+		下拉的时候自动填入的是value的值<input type="text" name="greeting" list="greetings">
+		<datalist id="greetings" style="display: none">
+			<option value="1"></option>
+			<option value="2"></option>
+			<option value="3"></option>
+		</datalist>
+	</form>
+<hr>	
+
+	帮助输入所用的自动完成功能，是一个既节省输入时间又十分方便的功能。在HTML5之前，因为谁都可以看见输入的值，所有在安全方面存在缺陷，只要使用AutoComplete属性，安全性方面也可以得到很好的控制。<br><br>
+
+	<h4>form设定为off</h4>
+	<form action="http://www.laolao.com:2333/text1.php" method="post" autocomplete="off">
+	设定为：on <input type="email" name="email1" autocomplete="on" /><br />
+	设定为：off <input type="email" name="email2" autocomplete="off" /><br />
+	<input type="submit" />
+	</form>
+
+</body>
+</html>
